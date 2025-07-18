@@ -1,9 +1,9 @@
 
-# Marry Matrimony Web App 💍
+# Marry Matrimony Web App 
 
 A fully functional matrimonial web application built using **Python Flask** and **MySQL**, designed to help users find their life partner. Users can register, upload profiles with photos, express interest in others, and view matched profiles. 
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - **Frontend**: HTML, CSS, Jinja2
 - **Backend**: Python (Flask)
