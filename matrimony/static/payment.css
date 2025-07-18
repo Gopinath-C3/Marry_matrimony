@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('https://images.unsplash.com/photo-1475721042966-f829c9b42aab?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWF0cmltb255fGVufDB8fDB8fHww') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 380px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.box h2 {
+  text-align: center;
+  color: #d00000;
+  margin-bottom: 20px;
+}
+
+.payment {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.button {
+  background: transparent;
+  border: 1px solid #d00000;
+  color: #d00000;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button.active,
+.button:hover {
+  background: #d00000;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: #555;
+}
+
+button[type="submit"] {
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #ff4d4d, #d00000);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(145deg, #d00000, #ff4d4d);
+}

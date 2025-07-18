@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://images.unsplash.com/photo-1475721042966-f829c9b42aab') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-container {
+  width: 90%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 30px;
+  color: #fff;
+}
+
+.profile-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #d00000;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  padding: 12px;
+  background: #ff4d4d;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #d00000;
+}
+
+.profile-pic {
+  text-align: center;
+}
+
+.profile-pic img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid white;
+}
+
+
+
+.delete-btn {
+  padding: 12px;
+  background: #ff4d4d;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-btn:hover  {
+  background: #d00000;
+}

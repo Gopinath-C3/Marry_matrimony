@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile – Marry Matrimony</title>
+  <link rel="stylesheet" href="/static/profile.css" />
+</head>
+<body>
+
+  <div class="profile-container glass-form">
+    <h2>My Profile</h2>
+
+   <form method="POST" enctype="multipart/form-data">
+
+  {% if user.profile_photo %}
+    <img src="{{ url_for('static', filename='uploads/' + user.profile_photo) }}" width="150" height="150" style="border-radius: 50%;">
+  {% else %}
+    <p>No photo uploaded</p>
+  {% endif %}
+
+  <label>Change Profile Photo</label>
+  <input type="file" name="profile_photo" accept="image/*">
+
+  
+  <label>Full Name</label>
+  <input type="text" name="full_name" value="{{ user.full_name }}" required />
+
+  <label>Age</label>
+  <input type="number" name="age" value="{{ user.age }}" min="18" required />
+  <label>Phone Number</label>
+<input type="tel" name="phone" value="{{ user.phone }}" required />
+
+
+
+  <label>Gender</label>
+  <select name="gender" required>
+    <option value="male" {{ 'selected' if user.gender == 'male' }}>Male</option>
+    <option value="female" {{ 'selected' if user.gender == 'female' }}>Female</option>
+    <option value="other" {{ 'selected' if user.gender == 'other' }}>Other</option>
+  </select>
+
+  <label>Location</label>
+  <input type="text" name="location" value="{{ user.location }}" />
+
+  <label>Religion</label>
+  <input type="text" name="religion" value="{{ user.religion }}" />
+
+  <label>Language Preference</label>
+  <input type="text" name="language_preference" value="{{ user.language_preference }}" />
+
+  <label>Job</label>
+  <textarea name="bio" rows="4">{{ user.bio }}</textarea>
+
+  <button type="submit">Save Changes</button>
+</form>
+<div style="height: 20px;"></div>
+
+<form action="/delete_account" method="POST" onsubmit="return confirm('Are you sure you want to delete your account permanently?');">
+    <button type="submit" class="delete-btn">Delete My Account</button>
+</form>
+
+
+</body>
+</html>

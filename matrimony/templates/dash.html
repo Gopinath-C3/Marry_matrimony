@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard – Marry Matrimony</title>
+  <link rel="stylesheet" href="/static/dash.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">💍 Marry Matrimony</div>
+
+    <form class="filter-form" method="GET" action="/dash">
+      
+      <input type="text" name="search" placeholder="Search name or city" />
+      <input type="number" name="age_from" placeholder="Age from" min="18">
+      <input type="number" name="age_to" placeholder="to" min="18">
+      <input type="text" name="location" placeholder="Location" />
+      
+      <button type="submit">Apply</button>
+    </form>
+
+    <div class="nav-user">
+  {% if user.profile_photo %}
+    <img src="{{ url_for('static', filename='uploads/' + user.profile_photo) }}" alt="User" />
+  {% else %}
+    <img src="{{ url_for('static', filename='default-user.png') }}" alt="User" />
+  {% endif %}
+  <a href="/profile">My Profile</a>
+    <a href="/logout" class="signout-button">Sign Out</a>
+
+</div>
+
+  </nav>
+
+  
+  <main class="social-feed">
+    <h2 class="section-title">Matched Profiles</h2>
+
+    {% for p in profiles %}
+    <div class="feed-card">
+      <img src="{{ url_for('static', filename='uploads/' + p.profile_photo) if p.profile_photo else 'https://randomuser.me/api/portraits/women/81.jpg' }}" class="profile-img">
+      <div class="feed-info">
+        <h3>{{ p.full_name }}, {{ p.age }}</h3>
+        <p><strong>Location:</strong> {{ p.location }}</p>
+        <p>{{ p.bio }}</p>
+        <button onclick="location.href='/profile/{{ p.id }}'">💌 View</button>
+
+      </div>
+    </div>
+    {% endfor %}
+  </main>
+
+</body>
+
+</html>

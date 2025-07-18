@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ profile.full_name }} – Profile View</title>
+  <link rel="stylesheet" href="/static/profile.css" />
+</head>
+<body>
+
+  <div class="profile-container glass-form">
+    <h2>{{ profile.full_name }}'s Profile</h2>
+
+    {% if profile.profile_photo %}
+      <img src="{{ url_for('static', filename='uploads/' + profile.profile_photo) }}" width="150" height="150" style="border-radius: 50%;">
+    {% else %}
+      <p>No photo available</p>
+    {% endif %}
+
+    <p><strong>Age:</strong> {{ profile.age }}</p>
+    <p><strong>Gender:</strong> {{ profile.gender }}</p>
+    <p><strong>Location:</strong> {{ profile.location }}</p>
+    <p><strong>Religion:</strong> {{ profile.religion }}</p>
+    <p><strong>Language Preference:</strong> {{ profile.language_preference }}</p>
+    <p><strong>Job:</strong> {{ profile.bio }}</p>
+    <p><strong>Phone:</strong> {{ profile.phone }}</p>
+
+
+    <a href="/dash"><button>⬅ Back to Dashboard</button></a>
+  </div>
+
+</body>
+</html>

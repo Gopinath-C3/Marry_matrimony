@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register - Tamil Matrimony</title>
+  <link rel="stylesheet" href="/static/register.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="image-gallery">
+      <img src="https://images.pexels.com/photos/27114962/pexels-photo-27114962.jpeg?cs=srgb&dl=pexels-noob-gaming-1476232724-27114962.jpg&fm=jpg" alt="Wedding 1" />
+      <img src="https://miro.medium.com/v2/resize:fit:1000/1*kNS_V07gsc5nado_LLBzBA.jpeg" alt="Wedding 2" />
+      <img src="https://cdn0.weddingwire.in/article/3400/original/1280/jpg/130043-tamil-marriage-5.jpeg" alt="Wedding 3" />
+      <img src="https://st1.bollywoodlife.com/wp-content/uploads/2023/09/Ashok-Selvan-Keerthi-Pandian-wedding-pics.jpg" alt="Wedding 4" />
+    </div>
+
+    <div class="glass-form">
+      <h2>Find Lakhs of Profiles</h2>
+      <form action="/register" method="POST" enctype="multipart/form-data">
+        <input type="text" name="full_name" placeholder="Enter Your Name" required />
+        <input type="number" name="age" placeholder="Age" required />
+
+        <div class="phone-row">
+          <select name="country_code" required>
+            <option value="+91">+91, India</option>
+          </select>
+          <input type="tel" name="phone" placeholder="Enter Your Phone Number" required />
+        </div>
+
+        <select name="gender" id="gender" required>
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+
+        <input type="text" name="location" placeholder="Location" required />
+
+        <select name="profile_for" required>
+          <option value="">Profile Created For</option>
+          <option value="self">Self</option>
+          <option value="sibling">Sibling</option>
+          <option value="friend">Friend</option>
+          <option value="relative">Relative</option>
+        </select>
+
+        <select name="language" required>
+          <option value="">Select Mother Tongue</option>
+          <option value="tamil">Tamil</option>
+          <option value="telugu">Telugu</option>
+          <option value="kannada">Kannada</option>
+          <option value="malayalam">Malayalam</option>
+        </select>
+
+        <select name="religion" required>
+          <option value="">Select Religion</option>
+          <option value="hindu">Hindu</option>
+          <option value="muslim">Muslim</option>
+          <option value="christian">Christian</option>
+          <option value="other">Other</option>
+        </select>
+
+        <select name="caste" required>
+          <option value="">Select Caste</option>
+          <option value="thevar">Thevar</option>
+          <option value="nadar">Nadar</option>
+          <option value="vanniyar">Vanniyar</option>
+          <option value="other">Other</option>
+        </select>
+
+        <textarea name="bio" placeholder="Job"></textarea>
+
+        <div class="terms">
+          <input type="checkbox" name="terms" required />
+          <label>I accept your Terms and Conditions</label>
+        </div>
+
+        <label>Upload Profile Photo:</label><br />
+        <input type="file" name="profile_photo" accept="image/*" /><br /><br />
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

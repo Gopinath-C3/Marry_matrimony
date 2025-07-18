@@ -1,0 +1,196 @@
+
+body {
+  background: url('https://images.unsplash.com/photo-1621801306185-8c0ccf9c8eb8?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5kaWFuJTIwbWFycmlhZ2V8ZW58MHx8MHx8fDA%3D') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  
+  position: relative;
+  
+
+
+}
+
+
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);  
+  z-index: 0;
+}
+
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  width: 300px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  text-align: center;
+  
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+
+ z-index: 1;  
+}
+
+
+.glass h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.glass input[type="email"],
+.glass input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+.glass input[type="email"],
+.glass input[type="password"] {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.glass input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #00b894;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.glass input[type="submit"]:hover {
+  background-color: #019875;
+}
+
+.note {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #ffd700;
+}
+
+.signup{
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.signup a {
+  color: #00cec9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.forgot-link {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.forgot-link a {
+  font-size: 13px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.forgot-link a:hover {
+  color: #00cec9;
+}
+.language-select {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.language-select label {
+  color: #fff;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.language-select select {
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+}
+.language-select {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.glass {
+  position: relative;
+
+  padding: 50px 40px;
+
+}
+.language-select label {
+  color: #eee; 
+}
+.glass h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.note {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #ffc107;
+}
+.flash-error {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid red;
+  color: darkred;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px 30px;
+  background-color: rgba(0, 0, 0, 0.6); 
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.logo-text {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}

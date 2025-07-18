@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Payment</title>
+  <link rel="stylesheet" href="/static/payment.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="box">
+    <h2>Payment</h2>
+
+    <div class="payment">
+      <button class="button active" onclick="showTab('card')">Card</button>
+      <button class="button" onclick="showTab('upi')">UPI</button>
+    </div>
+
+    <form action="thankyou.html" method="POST" id="card-form">
+      <input type="text" placeholder="Cardholder Name" required>
+      <input type="text" placeholder="Card Number" maxlength="16" required>
+      <input type="text" placeholder="MM/YY" maxlength="5" required>
+      <input type="text" placeholder="CVV" maxlength="3" required>
+      <button type="submit">Pay ₹50</button>
+    </form>
+
+    <form action="thankyou.html" method="POST" id="upi-form" style="display: none;">
+      <input type="text" placeholder="Enter your UPI ID (e.g., name@upi)" required>
+      <button type="submit">Pay ₹50 via UPI</button>
+    </form>
+  </div>
+
+  <script>
+    function showTab(tab) {
+      document.getElementById('card-form').style.display = tab === 'card' ? 'block' : 'none';
+      document.getElementById('upi-form').style.display = tab === 'upi' ? 'block' : 'none';
+
+      const buttons = document.querySelectorAll('.button');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      document.querySelector(`.button[onclick="showTab('${tab}')"]`).classList.add('active');
+    }
+  </script>
+</body>
+</html>
