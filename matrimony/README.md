@@ -33,8 +33,8 @@ A fully functional matrimonial web application built using **Python Flask** and 
 matrimony/
 │
 ├── static/
-│   └── uploads/              # Uploaded profile images
-│   └── style.css             # Main CSS
+│   └── uploads/              
+│   └── style.css             
 │
 ├── templates/
 │   ├── index.html
