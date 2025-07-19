@@ -55,7 +55,7 @@ matrimony/
 1. **Clone the repo**:
 ```bash
 git clone https://github.com/Gopinath-C3/Marry_matrimony.git
-cd tamil-matrimony
+cd Marry_matrimony
 ```
 
 2. **Install dependencies**:
