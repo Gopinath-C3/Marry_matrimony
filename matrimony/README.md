@@ -45,8 +45,8 @@ matrimony/
 │   ├── profile.html
 │   └── view_profile.html
 │
-├── mat.py                    # Main Flask app
-└── README.md                 # Project documentation
+├── mat.py                    
+└── README.md                 
 
 
 
@@ -54,7 +54,7 @@ matrimony/
 
 1. **Clone the repo**:
 ```bash
-git clone https://github.com/yourusername/tamil-matrimony.git
+git clone https://github.com/Gopinath-C3/Marry_matrimony.git
 cd tamil-matrimony
 ```
 
